@@ -1,6 +1,7 @@
 package com.lolduo.riotapiserver.service.riotApi
 
 import com.lolduo.riotapiserver.service.callApi.CallApiService
+import com.lolduo.riotapiserver.service.riotApi.response.Champion
 import org.springframework.stereotype.Service
 import java.net.URL
 
@@ -14,5 +15,9 @@ class RiotApiServiceImpl(private val callApiService: CallApiService) : RiotApiSe
         val versions = (response as? ArrayList<String>)?.toTypedArray()
 
         return versions ?: throw Exception("Error response from Riot API")
+    }
+
+    override fun getChampions(): Array<Champion> {
+        TODO()
     }
 }
