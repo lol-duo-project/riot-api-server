@@ -1,5 +1,6 @@
-package com.lolduo.riotapiserver.service
+package com.lolduo.riotapiserver.service.riotApi
 
+import com.lolduo.riotapiserver.service.callApi.CallApiService
 import org.springframework.stereotype.Service
 import java.net.URL
 

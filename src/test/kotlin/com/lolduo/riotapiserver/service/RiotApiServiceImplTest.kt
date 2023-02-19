@@ -1,5 +1,5 @@
-import com.lolduo.riotapiserver.service.CallApiService
-import com.lolduo.riotapiserver.service.RiotApiServiceImpl
+import com.lolduo.riotapiserver.service.callApi.CallApiService
+import com.lolduo.riotapiserver.service.riotApi.RiotApiServiceImpl
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

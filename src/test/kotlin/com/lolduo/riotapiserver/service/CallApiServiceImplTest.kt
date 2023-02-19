@@ -1,5 +1,6 @@
 package com.lolduo.riotapiserver.service
 
+import com.lolduo.riotapiserver.service.callApi.CallApiServiceImpl
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*

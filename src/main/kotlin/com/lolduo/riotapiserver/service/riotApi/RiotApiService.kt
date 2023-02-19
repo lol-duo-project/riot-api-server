@@ -1,4 +1,4 @@
-package com.lolduo.riotapiserver.service
+package com.lolduo.riotapiserver.service.riotApi
 
 
 interface RiotApiService {

@@ -1,6 +1,6 @@
 package com.lolduo.riotapiserver.controller
 
-import com.lolduo.riotapiserver.service.RiotApiService
+import com.lolduo.riotapiserver.service.riotApi.RiotApiService
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.`when`
 import org.springframework.beans.factory.annotation.Autowired

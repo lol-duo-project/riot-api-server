@@ -1,4 +1,4 @@
-package com.lolduo.riotapiserver.service
+package com.lolduo.riotapiserver.service.callApi
 
 import java.net.URL
 
