@@ -36,7 +36,7 @@ class CallApiServiceImplTest {
             .thenReturn(ResponseEntity(expectedResponse, HttpStatus.OK))
 
         //when
-        val response = callApiService.callApi(url)
+        val response = callApiService.callApi(url, Any::class.java)
 
         //then
         assertEquals(expectedResponse, response)

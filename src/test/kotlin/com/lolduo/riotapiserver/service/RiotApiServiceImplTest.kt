@@ -25,8 +25,8 @@ class RiotApiServiceImplTest {
     @Test
     fun testGetVersion() {
         //given
-        val response = arrayListOf("11.4.1")
-        `when`(callApiService.callApi(URL("https://ddragon.leagueoflegends.com/api/versions.json")))
+        val response = arrayOf("11.4.1")
+        `when`(callApiService.callApi(URL("https://ddragon.leagueoflegends.com/api/versions.json"), Array<String>::class.java))
             .thenReturn(response)
 
         //when

@@ -7,12 +7,13 @@ import java.net.URL
 @Service
 class CallApiServiceImpl(private val restTemplate: RestTemplate) : CallApiService {
 
-    override fun callApi(url: URL): Any {
-        try{
-            val response = restTemplate.getForEntity(url.toString(), Any::class.java)
+    override fun <T> callApi(url: URL, responseType: Class<T>): T {
+        try {
+            val response = restTemplate.getForEntity(url.toString(), responseType)
             return response.body ?: throw Exception("Error response from Riot API")
-        }catch (e: Exception){
+        } catch (e: Exception) {
             throw Exception("Error response from Riot API")
         }
     }
+
 }

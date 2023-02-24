@@ -5,5 +5,5 @@ import com.lolduo.riotapiserver.service.riotApi.response.Champion
 
 interface RiotApiService {
     fun getVersion(): Array<String>
-    fun getChampions(): Array<Champion>
+    fun getChampions(version:String, locale : String): Array<Champion>
 }

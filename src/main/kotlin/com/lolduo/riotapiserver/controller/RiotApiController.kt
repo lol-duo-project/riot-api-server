@@ -16,10 +16,13 @@ class RiotApiController(
         return riotApiService.getVersion()
     }
 
-    @GetMapping("/champions")
-    fun getChampions(): Array<ChampionResponse> {
-
-        return riotApiService.getChampions().map { champion ->
+    @GetMapping("/champions", params = ["version", "locale"])
+    fun getChampions(
+        version: String,
+        locale: String
+    ): Array<ChampionResponse> {
+        val response = riotApiService.getChampions(version, locale)
+        return response.map { champion ->
             convertResponse.convertChampion(champion)
         }.toTypedArray()
     }
