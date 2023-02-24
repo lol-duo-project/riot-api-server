@@ -25,4 +25,9 @@ class RiotApiServiceImpl(private val callApiService: CallApiService) : RiotApiSe
         val championMap: Map<String, Champion> = Gson().fromJson(jsonOfResponse, championType)
         return championMap.values.toTypedArray()
     }
+
+    override fun getLocales(): Array<String> {
+        val url = URL("https://ddragon.leagueoflegends.com/cdn/languages.json")
+        return callApiService.callApi(url, Array<String>::class.java)
+    }
 }

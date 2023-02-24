@@ -21,6 +21,9 @@ class RiotApiControllerTest {
     @MockBean
     lateinit var riotApiService: RiotApiService
 
+    @MockBean
+    lateinit var convertResponse: ConvertResponse
+
     @Test
     fun testGetVersion() {
         // Set up the mock response from the RiotApiService

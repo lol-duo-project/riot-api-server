@@ -26,4 +26,9 @@ class RiotApiController(
             convertResponse.convertChampion(champion)
         }.toTypedArray()
     }
+
+    @GetMapping("/locales")
+    fun getLocales(): Array<String> {
+        return riotApiService.getLocales()
+    }
 }
