@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: riot-api-deployment
+  labels:
+    app: riot-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      server: riot-api-server
+  template:
+    metadata:
+      labels:
+        server: riot-api-server
+    spec:
+      containers:
+        - name: rest-api-kotlin-container
+          image: 431955170593.dkr.ecr.ap-northeast-2.amazonaws.com/lol-duo-images:riot-api-latest
+          ports:
+            - containerPort: 80
