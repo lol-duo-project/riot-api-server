@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: riot-api-deployment
+  namespace: prod-lol-duo
   labels:
     app: riot-api-deployment
 spec:
