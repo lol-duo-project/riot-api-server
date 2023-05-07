@@ -9,4 +9,4 @@ spec:
     - port: 27017
       targetPort: 27017
   selector:
-    db: prod-iterview-mongodb
+    db: prod-lol-duo-mongodb
